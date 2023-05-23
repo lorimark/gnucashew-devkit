@@ -36,6 +36,11 @@ RUN apt-get update -q              \
 RUN git clone https://github.com/emweb/wt.git /usr/src/Wt4
 
 #
+# clone Wtx
+#
+RUN git clone https://github.com/lorimark/Wtx /usr/src/Wtx
+
+#
 # compile and install Wt
 #
 RUN mkdir -p /tmp/Wt4/build \
@@ -46,7 +51,7 @@ RUN mkdir -p /tmp/Wt4/build \
      -DCONNECTOR_FCGI=OFF \
      -DENABLE_HARU=TRUE \
      /usr/src/Wt4 \
- && make -j 8 \
+ && make -j 4 \
  && make install
 
 #

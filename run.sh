@@ -11,6 +11,7 @@ docker run                               \
   -u $(id -u ${USER}):$(id -g ${USER})   \
   -v /etc/passwd:/etc/passwd             \
   -v /etc/group:/etc/group               \
+  -v /mnt:/mnt                           \
   -v /home:/home                         \
   -v /tmp/.X11-unix:/tmp/.X11-unix       \
   -v $HOME/.Xauthority:$HOME/.Xauthority \
