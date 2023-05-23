@@ -1,0 +1,30 @@
+*************************************************************
+**** DOCKER CONTAINER ***************************************
+
+gnucashew development toolkit
+
+Tools available to you;
+
+  vim - vim
+  mc  - midnight commander
+  gcc - full gcc development installation
+  git - source repo manager
+
+Documentation;
+
+  /README.md - detailed notes about this image
+
+References;
+
+  https://github.com/lorimark/gnucashew-devkit
+  https://hub.docker.com/r/lorimark/gnucashew-devkit
+  https://wiki.gnucash.org/wiki/Development
+  https://github.com/Gnucash/gnucash
+
+Happy coding!
+
+
+**** DOCKER CONTAINER ***************************************
+*************************************************************
+
+
