@@ -4,13 +4,14 @@
 #
 #
 
-docker run                             \
-  -it                                  \
-  --rm                                 \
-  --net host                           \
-  -v /home:/home                       \
-  -e "TERM=xterm-256color"             \
-  -w ${PWD}                            \
-  lorimark/gnucashew-devkit            \
+docker run                               \
+  -it                                    \
+  --rm                                   \
+  --net host                             \
+  -v /tmp/.X11-unix:/tmp/.X11-unix       \
+  -v $HOME/.Xauthority:/root/.Xauthority \
+  -e "TERM=xterm-256color"               \
+  -e "DISPLAY=$DISPLAY"                  \
+  lorimark/gnucashew-devkit              \
   /bin/bash
 

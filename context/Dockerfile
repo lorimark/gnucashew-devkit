@@ -28,6 +28,7 @@ RUN apt-get update -q              \
       libhpdf-dev                  \
       libpango1.0-dev              \
       libghc-openglraw-dev         \
+      libpq-dev                    \
       freeglut3-dev
 
 #
@@ -36,9 +37,10 @@ RUN apt-get update -q              \
 RUN git clone https://github.com/emweb/wt.git /usr/src/Wt4
 
 #
-# clone Wtx
+# clone Wtx and give a symbolic link to /opt/Wtx
 #
-RUN git clone https://github.com/lorimark/Wtx /usr/src/Wtx
+RUN git clone https://github.com/lorimark/Wtx /usr/src/Wtx \
+ && ln -s /usr/src/Wtx/src/Wtx /opt/Wtx
 
 #
 # compile and install Wt
